@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>To: Renalyn</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background: linear-gradient(to bottom right, #ffccd5, #e0bbff);
+      font-family: 'Georgia', serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      overflow: hidden;
+    }
+
+    .envelope {
+      width: 200px;
+      height: 150px;
+      background-color: #d6336c;
+      border-radius: 10px;
+      position: relative;
+      cursor: pointer;
+      box-shadow: 0 0 20px rgba(0,0,0,0.2);
+      animation: pulse 2s infinite;
+    }
+
+    .envelope::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(to top left, #fff0f5 50%, transparent 50%);
+      border-radius: 10px;
+    }
+
+    @keyframes pulse {
+      0% { transform: scale(1); }
+      50% { transform: scale(1.05); }
+      100% { transform: scale(1); }
+    }
+
+    .letter-box {
+      display: none;
+      background-color: #fff0f5;
+      padding: 40px;
+      border-radius: 20px;
+      box-shadow: 0 0 20px rgba(0,0,0,0.2);
+      max-width: 600px;
+      text-align: center;
+      animation: fadeIn 2s ease-in;
+    }
+
+    h1 {
+      font-family: 'Brush Script MT', cursive;
+      font-size: 3em;
+      color: #d6336c;
+      margin-bottom: 20px;
+    }
+
+    p {
+      font-size: 1.2em;
+      color: #4b2e2e;
+      line-height: 1.6;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .footer {
+      margin-top: 20px;
+      font-size: 0.9em;
+      color: #6c757d;
+    }
+  </style>
+</head>
+<body>
+  <div class="envelope" onclick="openLetter()" title="Click to open 💌"></div>
+
+  <div class="letter-box" id="letter">
+    <h1>To: Renalyn</h1>
+    <p>Dear Renalyn,</p>
+    <p>Hi love,
+
+I don’t know how to explain it, but even with all this distance between us, you still feel close. You’re in the rhythm of my day, in the way I smile at my phone, in the quiet moments when I wish I could reach out and touch your hand.
+
+I’m here. Waiting. Not just for the day we’re together again, but for every little moment that makes us feel like we already are. A message from you. A call. A memory. They’re lifelines. And I hold onto them like they’re pieces of you.
+
+Some nights are harder than others. I miss your laugh, your warmth, the way you make everything feel okay. But I remind myself: this isn’t forever. It’s just a chapter. And every chapter brings us closer to the page where I get to see you again.
+
+I’m proud of us for loving through the miles, for choosing each other even when it’s not easy. You mean the world to me. And I’ll keep waiting, because you’re worth every second.
+
+Until then, I’ll be here. Loving you from afar. Dreaming of the day I don’t have to.
+
+</p>
+    <p><em>YOUR'S Renuzawa</em></p>
+    <div class="footer">🤍🤍🤍</div>
+  </div>
+
+  <script>
+    function openLetter() {
+      document.querySelector('.envelope').style.display = 'none';
+      document.getElementById('letter').style.display = 'block';
+    }
+  </script>
+</body>
+</html>
